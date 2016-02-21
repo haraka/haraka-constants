@@ -1,0 +1,69 @@
+{
+  "author": "Haraka Team <harakamail@gmail.com>",
+  "name": "haraka-constants",
+  "license": "MIT",
+  "description": "Haraka constants",
+  "version": "1.0.0",
+  "homepage": "http://haraka.github.io",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:haraka/haraka-constants.git"
+  },
+  "main": "index.js",
+  "engines": {
+    "node": ">= 0.10.42"
+  },
+  "dependencies": {
+  },
+  "eslintConfig": {
+    "env": {
+      "node": true
+    },
+    "rules": {
+      "camelcase": [
+        0,
+        {
+          "properties": "never"
+        }
+      ],
+      "dot-notation": 2,
+      "indent": [
+        2,
+        4,
+        {
+          "SwitchCase": 1
+        }
+      ],
+      "one-var": [
+        2,
+        "never"
+      ],
+      "no-trailing-spaces": [
+        2,
+        {
+          "skipBlankLines": false
+        }
+      ],
+      "keyword-spacing": [
+        2,
+        {
+          "overrides": {}
+        }
+      ]
+    }
+  },
+  "optionalDependencies": {},
+  "devDependencies": {
+    "eslint": ">=2.0.0",
+    "grunt": "*",
+    "grunt-eslint": "*",
+    "nodeunit": "^0.9.1"
+  },
+  "bugs": {
+    "mail": "helpme@gmail.com",
+    "url": "https://github.com/haraka/haraka-constants/issues"
+  },
+  "scripts": {
+    "test": "./run_tests"
+  }
+}
