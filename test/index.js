@@ -44,8 +44,14 @@ exports.import = {
 
 exports.translate = {
     'converts num to str' : function (test) {
-        test.expect(1);
+        test.expect(2);
         test.equal('CONT', constants.translate(900));
+        test.equal('DENY', constants.translate(902));
+        test.done();
+    },
+    'UNKNOWN' : function (test) {
+        test.expect(1);
+        test.equal('UNKNOWN', constants.translate(800));
         test.done();
     },
 };
