@@ -1,0 +1,2 @@
+# haraka-constants
+Haraka constants
