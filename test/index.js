@@ -1,6 +1,18 @@
 
 var constants = require('../index');
 
+exports.constants = {
+    'cont' : function (test) {
+        test.expect(1);
+        test.equal(constants.cont, 900);
+        test.done();
+    },
+    'stop' : function (test) {
+        test.expect(1);
+        test.equal(constants.stop, 901);
+        test.done();
+    }
+}
 
 exports.import = {
     'exists as function' : function (test) {
