@@ -1,5 +1,7 @@
 [![Build Status][ci-img]][ci-url]
 [![Coverage Status][cov-img]][cov-url]
+[![Code Climate][clim-img]][clim-url]
+[![NPM][npm-img]][npm-url]
 
 # haraka-constants
 
@@ -44,3 +46,8 @@ var constants = require('haraka-constants');
 [ci-url]: https://travis-ci.org/haraka/haraka-constants
 [cov-img]: https://codecov.io/github/haraka/haraka-constants/coverage.svg
 [cov-url]: https://codecov.io/github/haraka/haraka-constants?branch=master
+[clim-img]: https://codeclimate.com/github/haraka/haraka-constants/badges/gpa.svg
+[clim-url]: https://codeclimate.com/github/haraka/haraka-constants
+[npm-img]: https://nodei.co/npm/haraka-constants.png
+[npm-url]: https://www.npmjs.com/package/haraka-constants
+
