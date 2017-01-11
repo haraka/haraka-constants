@@ -7,9 +7,24 @@ exports.constants = {
         test.equal(constants.cont, 900);
         test.done();
     },
+    'CONT' : function (test) {
+        test.expect(1);
+        test.equal(constants.CONT, 900);
+        test.done();
+    },
     'stop' : function (test) {
         test.expect(1);
         test.equal(constants.stop, 901);
+        test.done();
+    },
+    'deny' : function (test) {
+        test.expect(1);
+        test.equal(constants.deny, 902);
+        test.done();
+    },
+    'DENY' : function (test) {
+        test.expect(1);
+        test.equal(constants.DENY, 902);
         test.done();
     }
 }

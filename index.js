@@ -37,3 +37,5 @@ exports.translate = function (value) {
     if (translationTable[value]) return translationTable[value];
     return 'UNKNOWN';
 };
+
+exports.import(exports);
