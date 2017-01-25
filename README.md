@@ -5,6 +5,8 @@
 
 # haraka-constants
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/haraka/haraka-constants.svg)](https://greenkeeper.io/)
+
 Haraka constants. Exports the following constants used throughout Haraka:
 
     CONT: 900,
