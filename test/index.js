@@ -1,5 +1,8 @@
 
-var constants = require('../index');
+const node_const   = require('constants');
+
+let constants      = require('../index');
+let write_excl_val = node_const.O_CREAT | node_const.O_TRUNC | node_const.O_WRONLY | node_const.O_EXCL;
 
 exports.constants = {
     'cont' : function (test) {
@@ -29,7 +32,7 @@ exports.constants = {
     },
     'WRITE_EXCL' : function (test) {
         test.expect(1);
-        test.equal(constants.WRITE_EXCL, 3585);
+        test.equal(constants.WRITE_EXCL, write_excl_val);
         test.done();
     }
 }
@@ -56,7 +59,7 @@ exports.import = {
                 NEXT_HOOK: 907,
                 DELAY: 908,
                 DENYSOFTDISCONNECT: 909,
-                WRITE_EXCL: 3585
+                WRITE_EXCL: write_excl_val
             }
         );
         test.done();
