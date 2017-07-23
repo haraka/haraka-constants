@@ -3,7 +3,7 @@
   "name": "haraka-constants",
   "license": "MIT",
   "description": "Haraka constants",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "homepage": "http://haraka.github.io",
   "repository": {
     "type": "git",
@@ -11,7 +11,7 @@
   },
   "main": "index.js",
   "engines": {
-    "node": ">= 4"
+    "node": ">= 6"
   },
   "dependencies": {},
   "optionalDependencies": {},
