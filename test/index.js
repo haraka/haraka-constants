@@ -26,6 +26,11 @@ exports.constants = {
         test.expect(1);
         test.equal(constants.DENY, 902);
         test.done();
+    },
+    'WRITE_EXCL' : function (test) {
+        test.expect(1);
+        test.equal(constants.WRITE_EXCL, 3585);
+        test.done();
     }
 }
 
@@ -50,7 +55,8 @@ exports.import = {
                 OK: 906,
                 NEXT_HOOK: 907,
                 DELAY: 908,
-                DENYSOFTDISCONNECT: 909
+                DENYSOFTDISCONNECT: 909,
+                WRITE_EXCL: 3585
             }
         );
         test.done();
