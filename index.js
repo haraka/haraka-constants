@@ -3,7 +3,7 @@
 // node.js class
 const node_const = require('constants');
 
-let translationTable = {};
+const translationTable = {};
 
 exports.cont               = 900;
 exports.stop               = 901;
@@ -18,7 +18,7 @@ exports.denysoftdisconnect = 909;
 exports.write_excl  = node_const.O_CREAT | node_const.O_TRUNC | node_const.O_WRONLY | node_const.O_EXCL;
 
 exports.import = function (object) {
-    for (var k in exports) {
+    for (const k in exports) {
         if (k === 'import') continue;
         if (k === 'translate') continue;
         if (exports.hasOwnProperty(k)) {
@@ -31,7 +31,7 @@ exports.translate = function (value) {
 
     // cache the translationTable object
     if (Object.keys(translationTable).length === 0) {
-        for (var k in exports) {
+        for (const k in exports) {
             if (typeof exports[k] === 'number') {
                 translationTable[exports[k]] = k.toUpperCase();
             }

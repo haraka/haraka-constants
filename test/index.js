@@ -1,8 +1,8 @@
 
 const node_const   = require('constants');
 
-let constants      = require('../index');
-let write_excl_val = node_const.O_CREAT | node_const.O_TRUNC | node_const.O_WRONLY | node_const.O_EXCL;
+const constants      = require('../index');
+const write_excl_val = node_const.O_CREAT | node_const.O_TRUNC | node_const.O_WRONLY | node_const.O_EXCL;
 
 exports.constants = {
     'cont' : function (test) {
@@ -45,7 +45,7 @@ exports.import = {
     },
     'populates an object' : function (test) {
         test.expect(1);
-        var newObj = {};
+        const newObj = {};
         constants.import(newObj);
         test.deepEqual(newObj,
             {
