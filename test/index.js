@@ -47,6 +47,7 @@ exports.import = {
         test.expect(1);
         const newObj = {};
         constants.import(newObj);
+        delete newObj.connection;
         test.deepEqual(newObj,
             {
                 CONT: 900,
@@ -79,3 +80,26 @@ exports.translate = {
         test.done();
     },
 };
+
+exports.connection = {
+    'has connection state CMD' : function (test) {
+        test.expect(1);
+        test.equal(constants.connection.state.CMD, 1);
+        test.done();
+    },
+    'has connection state STATE_CMD' : function (test) {
+        test.expect(1);
+        test.equal(constants.connection.state.STATE_CMD, 1);
+        test.done();
+    },
+    'has connection state DISCONNECTED' : function (test) {
+        test.expect(1);
+        test.equal(constants.connection.state.DISCONNECTED, 100);
+        test.done();
+    },
+    'has connection state STATE_DISCONNECTED' : function (test) {
+        test.expect(1);
+        test.equal(constants.connection.state.STATE_DISCONNECTED, 100);
+        test.done();
+    },
+}

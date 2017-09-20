@@ -21,6 +21,7 @@ exports.import = function (object) {
     for (const k in exports) {
         if (k === 'import') continue;
         if (k === 'translate') continue;
+        if (k === 'connection') continue;
         if (exports.hasOwnProperty(k)) {
             object[k.toUpperCase()] = exports[k];
         }
@@ -43,3 +44,20 @@ exports.translate = function (value) {
 };
 
 exports.import(exports);
+
+exports.connection = {
+    state: {
+        CMD:             1,
+        LOOP:            2,
+        DATA:            3,
+        PAUSE:           4,
+        PAUSE_SMTP:      5,
+        PAUSE_DATA:      6,
+        DISCONNECTING:   99,
+        DISCONNECTED:    100,
+    }
+}
+
+Object.keys(exports.connection.state).forEach((state) => {
+    exports.connection.state['STATE_' + state] = exports.connection.state[state];
+})
