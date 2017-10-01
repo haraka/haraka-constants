@@ -59,5 +59,5 @@ exports.connection = {
 }
 
 Object.keys(exports.connection.state).forEach((state) => {
-    exports.connection.state['STATE_' + state] = exports.connection.state[state];
+    exports.connection.state[`STATE_${state}`] = exports.connection.state[state];
 })
