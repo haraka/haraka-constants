@@ -26,8 +26,8 @@ Haraka constants. Exports the following constants used throughout Haraka:
 Populates an object with the constants.
 
 ```js
-var constants = require('haraka-constants');
-var myObj = {};
+const constants = require('haraka-constants');
+const myObj = {};
 constants.import(myObj);
 
 // myObj.cont === 900
@@ -35,10 +35,10 @@ constants.import(myObj);
 
 ## translate
 
-Converts a numeric constant to it's string representation.
+Converts a numeric constant to its string representation.
 
 ```js
-var constants = require('haraka-constants');
+const constants = require('haraka-constants');
 // 'CONT' === constants.translate(900);
 ```
 
