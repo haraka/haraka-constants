@@ -22,7 +22,7 @@ exports.import = function (object) {
         if (k === 'import') continue;
         if (k === 'translate') continue;
         if (k === 'connection') continue;
-        if (exports.hasOwnProperty(k)) {
+        if (Object.prototype.hasOwnProperty.call(exports, k)) {
             object[k.toUpperCase()] = exports[k];
         }
     }
