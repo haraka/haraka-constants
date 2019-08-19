@@ -5,32 +5,32 @@ const constants      = require('../index');
 const write_excl_val = node_const.O_CREAT | node_const.O_TRUNC | node_const.O_WRONLY | node_const.O_EXCL;
 
 exports.constants = {
-    'cont' : function (test) {
+    'cont' (test) {
         test.expect(1);
         test.equal(constants.cont, 900);
         test.done();
     },
-    'CONT' : function (test) {
+    'CONT' (test) {
         test.expect(1);
         test.equal(constants.CONT, 900);
         test.done();
     },
-    'stop' : function (test) {
+    'stop' (test) {
         test.expect(1);
         test.equal(constants.stop, 901);
         test.done();
     },
-    'deny' : function (test) {
+    'deny' (test) {
         test.expect(1);
         test.equal(constants.deny, 902);
         test.done();
     },
-    'DENY' : function (test) {
+    'DENY' (test) {
         test.expect(1);
         test.equal(constants.DENY, 902);
         test.done();
     },
-    'WRITE_EXCL' : function (test) {
+    'WRITE_EXCL' (test) {
         test.expect(1);
         test.equal(constants.WRITE_EXCL, write_excl_val);
         test.done();
@@ -38,12 +38,12 @@ exports.constants = {
 }
 
 exports.import = {
-    'exists as function' : function (test) {
+    'exists as function' (test) {
         test.expect(1);
         test.equal(typeof constants.import, 'function');
         test.done();
     },
-    'populates an object' : function (test) {
+    'populates an object' (test) {
         test.expect(1);
         const newObj = {};
         constants.import(newObj);
@@ -68,13 +68,13 @@ exports.import = {
 };
 
 exports.translate = {
-    'converts num to str' : function (test) {
+    'converts num to str' (test) {
         test.expect(2);
         test.equal('CONT', constants.translate(900));
         test.equal('DENY', constants.translate(902));
         test.done();
     },
-    'UNKNOWN' : function (test) {
+    'UNKNOWN' (test) {
         test.expect(1);
         test.equal('UNKNOWN', constants.translate(800));
         test.done();
@@ -82,22 +82,22 @@ exports.translate = {
 };
 
 exports.connection = {
-    'has connection state CMD' : function (test) {
+    'has connection state CMD' (test) {
         test.expect(1);
         test.equal(constants.connection.state.CMD, 1);
         test.done();
     },
-    'has connection state STATE_CMD' : function (test) {
+    'has connection state STATE_CMD' (test) {
         test.expect(1);
         test.equal(constants.connection.state.STATE_CMD, 1);
         test.done();
     },
-    'has connection state DISCONNECTED' : function (test) {
+    'has connection state DISCONNECTED' (test) {
         test.expect(1);
         test.equal(constants.connection.state.DISCONNECTED, 100);
         test.done();
     },
-    'has connection state STATE_DISCONNECTED' : function (test) {
+    'has connection state STATE_DISCONNECTED' (test) {
         test.expect(1);
         test.equal(constants.connection.state.STATE_DISCONNECTED, 100);
         test.done();

@@ -16,8 +16,8 @@
   "dependencies": {},
   "optionalDependencies": {},
   "devDependencies": {
-    "eslint": ">=3",
-    "eslint-plugin-haraka": "*",
+    "eslint": ">6",
+    "eslint-plugin-haraka": ">=1.0.10",
     "nodeunit": "*"
   },
   "bugs": {
