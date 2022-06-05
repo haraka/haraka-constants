@@ -16,7 +16,7 @@
   "dependencies": {},
   "optionalDependencies": {},
   "devDependencies": {
-    "eslint": ">=6",
+    "eslint": ">=8",
     "eslint-plugin-haraka": ">=1.0.10",
     "nodeunit": "*"
   },
@@ -25,8 +25,8 @@
     "url": "https://github.com/haraka/haraka-constants/issues"
   },
   "scripts": {
-    "lint": "./node_modules/.bin/eslint *.js test/*.js",
-    "lintfix": "./node_modules/.bin/eslint --fix *.js test/*.js",
+    "lint": "npx eslint *.js test",
+    "lintfix": "npx eslint --fix *.js test",
     "test": "./run_tests"
   }
 }
