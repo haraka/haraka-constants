@@ -18,7 +18,7 @@
   "devDependencies": {
     "eslint": ">=8",
     "eslint-plugin-haraka": ">=1.0.10",
-    "nodeunit-x": "*"
+    "mocha": "*"
   },
   "bugs": {
     "mail": "helpme@gmail.com",
@@ -27,6 +27,6 @@
   "scripts": {
     "lint": "npx eslint *.js test",
     "lintfix": "npx eslint --fix *.js test",
-    "test": "node run_tests"
+    "test": "npx mocha"
   }
 }
