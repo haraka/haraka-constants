@@ -43,8 +43,8 @@ const constants = require('haraka-constants');
 ```
 
 
-[ci-img]: https://travis-ci.org/haraka/haraka-constants.svg?branch=master
-[ci-url]: https://travis-ci.org/haraka/haraka-constants
+[ci-img]: https://github.com/haraka/haraka-constants/actions/workflows/ci.yml/badge.svg
+[ci-url]: https://github.com/haraka/haraka-constants/actions/workflows/ci.yml
 [cov-img]: https://codecov.io/github/haraka/haraka-constants/coverage.svg
 [cov-url]: https://codecov.io/github/haraka/haraka-constants?branch=master
 [clim-img]: https://codeclimate.com/github/haraka/haraka-constants/badges/gpa.svg

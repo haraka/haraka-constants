@@ -3,7 +3,7 @@
   "name": "haraka-constants",
   "license": "MIT",
   "description": "Haraka constants",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "homepage": "http://haraka.github.io",
   "repository": {
     "type": "git",
@@ -16,17 +16,17 @@
   "dependencies": {},
   "optionalDependencies": {},
   "devDependencies": {
-    "eslint": ">=6",
+    "eslint": ">=8",
     "eslint-plugin-haraka": ">=1.0.10",
-    "nodeunit": "*"
+    "mocha": "*"
   },
   "bugs": {
     "mail": "helpme@gmail.com",
     "url": "https://github.com/haraka/haraka-constants/issues"
   },
   "scripts": {
-    "lint": "./node_modules/.bin/eslint *.js test/*.js",
-    "lintfix": "./node_modules/.bin/eslint --fix *.js test/*.js",
-    "test": "./run_tests"
+    "lint": "npx eslint *.js test",
+    "lintfix": "npx eslint --fix *.js test",
+    "test": "npx mocha"
   }
 }
