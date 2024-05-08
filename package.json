@@ -19,7 +19,7 @@
   "dependencies": {},
   "optionalDependencies": {},
   "devDependencies": {
-    "eslint-plugin-haraka": ">=1.0.10"
+    "@haraka/eslint-config": "^1.1.5"
   },
   "bugs": {
     "mail": "helpme@gmail.com",
