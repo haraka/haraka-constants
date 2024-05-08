@@ -26,9 +26,9 @@ Haraka constants. Exports the following constants used throughout Haraka:
 Populates an object with the constants.
 
 ```js
-const constants = require('haraka-constants');
-const myObj = {};
-constants.import(myObj);
+const constants = require('haraka-constants')
+const myObj = {}
+constants.import(myObj)
 
 // myObj.cont === 900
 ```
@@ -38,10 +38,9 @@ constants.import(myObj);
 Converts a numeric constant to its string representation.
 
 ```js
-const constants = require('haraka-constants');
+const constants = require('haraka-constants')
 // 'CONT' === constants.translate(900);
 ```
-
 
 [ci-img]: https://github.com/haraka/haraka-constants/actions/workflows/ci.yml/badge.svg
 [ci-url]: https://github.com/haraka/haraka-constants/actions/workflows/ci.yml
@@ -51,4 +50,3 @@ const constants = require('haraka-constants');
 [clim-url]: https://codeclimate.com/github/haraka/haraka-constants
 [npm-img]: https://nodei.co/npm/haraka-constants.png
 [npm-url]: https://www.npmjs.com/package/haraka-constants
-
