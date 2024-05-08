@@ -3,30 +3,36 @@
   "name": "haraka-constants",
   "license": "MIT",
   "description": "Haraka constants",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "homepage": "http://haraka.github.io",
   "repository": {
     "type": "git",
     "url": "git@github.com:haraka/haraka-constants.git"
   },
   "main": "index.js",
+  "files": [
+    "CHANGELOG.md"
+  ],
   "engines": {
     "node": ">= 6"
   },
   "dependencies": {},
   "optionalDependencies": {},
   "devDependencies": {
-    "eslint": ">=8",
-    "eslint-plugin-haraka": ">=1.0.10",
-    "mocha": "*"
+    "@haraka/eslint-config": "^1.1.5"
   },
   "bugs": {
     "mail": "helpme@gmail.com",
     "url": "https://github.com/haraka/haraka-constants/issues"
   },
   "scripts": {
-    "lint": "npx eslint *.js test",
-    "lintfix": "npx eslint --fix *.js test",
-    "test": "npx mocha"
+    "format": "npm run prettier:fix && npm run lint:fix",
+    "lint": "npx eslint@^8 *.js test",
+    "lint:fix": "npx eslint@^8 *.js test --fix",
+    "prettier": "npx prettier . --check",
+    "prettier:fix": "npx prettier . --write --log-level=warn",
+    "test": "npx mocha@10",
+    "versions": "npx dependency-version-checker check",
+    "versions:fix": "npx dependency-version-checker update && npm run prettier:fix"
   }
 }
