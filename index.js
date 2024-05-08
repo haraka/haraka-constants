@@ -23,9 +23,7 @@ exports.write_excl =
 
 exports.import = function (object) {
   for (const k in exports) {
-    if (k === 'import') continue
-    if (k === 'translate') continue
-    if (k === 'connection') continue
+    if (['import', 'translate', 'connection'].includes(k)) continue
     if (Object.prototype.hasOwnProperty.call(exports, k)) {
       object[k.toUpperCase()] = exports[k]
     }
@@ -42,8 +40,7 @@ exports.translate = function (value) {
     }
   }
 
-  if (translationTable[value]) return translationTable[value]
-  return 'UNKNOWN'
+  return translationTable[value] || 'UNKNOWN'
 }
 
 exports.import(exports)
@@ -61,6 +58,6 @@ exports.connection = {
   },
 }
 
-Object.keys(exports.connection.state).forEach((state) => {
+for (const state of Object.keys(exports.connection.state)) {
   exports.connection.state[`STATE_${state}`] = exports.connection.state[state]
-})
+}
