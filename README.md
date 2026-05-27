@@ -2,11 +2,9 @@
 [![Coverage Status][cov-img]][cov-url]
 [![Code Climate][clim-img]][clim-url]
 
-[![NPM][npm-img]][npm-url]
-
 # haraka-constants
 
-Haraka constants. Exports the following constants used throughout Haraka:
+Haraka constants. Exports the following SMTP result constants used throughout Haraka:
 
     CONT: 900,
     STOP: 901,
@@ -19,18 +17,37 @@ Haraka constants. Exports the following constants used throughout Haraka:
     DELAY: 908,
     DENYSOFTDISCONNECT: 909
 
+Each constant is exported in both lowercase (`cont`) and uppercase (`CONT`) form.
+
+## write_excl
+
+A bitmask of `fs` open flags (`O_CREAT | O_TRUNC | O_WRONLY | O_EXCL`) suitable for opening a file write-exclusively — fails if the file already exists.
+
+## connection.state
+
+Numeric identifiers for the connection state machine. Available under both bare and `STATE_`-prefixed names:
+
+    CMD / STATE_CMD: 1,
+    LOOP / STATE_LOOP: 2,
+    DATA / STATE_DATA: 3,
+    PAUSE / STATE_PAUSE: 4,
+    PAUSE_SMTP / STATE_PAUSE_SMTP: 5,
+    PAUSE_DATA / STATE_PAUSE_DATA: 6,
+    DISCONNECTING / STATE_DISCONNECTING: 99,
+    DISCONNECTED / STATE_DISCONNECTED: 100
+
 # Exported Functions
 
 ## import
 
-Populates an object with the constants.
+Populates an object with the uppercase constants.
 
 ```js
 const constants = require('haraka-constants')
 const myObj = {}
 constants.import(myObj)
 
-// myObj.cont === 900
+// myObj.CONT === 900
 ```
 
 ## translate
@@ -48,5 +65,3 @@ const constants = require('haraka-constants')
 [cov-url]: https://codecov.io/github/haraka/haraka-constants?branch=master
 [clim-img]: https://codeclimate.com/github/haraka/haraka-constants/badges/gpa.svg
 [clim-url]: https://codeclimate.com/github/haraka/haraka-constants
-[npm-img]: https://nodei.co/npm/haraka-constants.png
-[npm-url]: https://www.npmjs.com/package/haraka-constants
