@@ -1,7 +1,6 @@
 'use strict'
 
-// node.js class
-const node_const = require('node:constants')
+const { constants: fs_const } = require('node:fs')
 
 const translationTable = {}
 
@@ -16,10 +15,7 @@ exports.next_hook = 907
 exports.delay = 908
 exports.denysoftdisconnect = 909
 exports.write_excl =
-  node_const.O_CREAT |
-  node_const.O_TRUNC |
-  node_const.O_WRONLY |
-  node_const.O_EXCL
+  fs_const.O_CREAT | fs_const.O_TRUNC | fs_const.O_WRONLY | fs_const.O_EXCL
 
 exports.import = function (object) {
   for (const k in exports) {
@@ -31,7 +27,6 @@ exports.import = function (object) {
 }
 
 exports.translate = function (value) {
-  // cache the translationTable object
   if (Object.keys(translationTable).length === 0) {
     for (const k in exports) {
       if (typeof exports[k] === 'number') {

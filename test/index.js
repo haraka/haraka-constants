@@ -1,40 +1,38 @@
-const assert = require('assert')
+const assert = require('node:assert/strict')
+const { describe, it } = require('node:test')
 
-const node_const = require('constants')
+const { constants: fs_const } = require('node:fs')
 
 const constants = require('../index')
 const write_excl_val =
-  node_const.O_CREAT |
-  node_const.O_TRUNC |
-  node_const.O_WRONLY |
-  node_const.O_EXCL
+  fs_const.O_CREAT | fs_const.O_TRUNC | fs_const.O_WRONLY | fs_const.O_EXCL
 
-describe('constants', function () {
-  it('cont', function () {
+describe('constants', () => {
+  it('cont', () => {
     assert.equal(constants.cont, 900)
   })
-  it('CONT', function () {
+  it('CONT', () => {
     assert.equal(constants.CONT, 900)
   })
-  it('stop', function () {
+  it('stop', () => {
     assert.equal(constants.stop, 901)
   })
-  it('deny', function () {
+  it('deny', () => {
     assert.equal(constants.deny, 902)
   })
-  it('DENY', function () {
+  it('DENY', () => {
     assert.equal(constants.DENY, 902)
   })
-  it('WRITE_EXCL', function () {
+  it('WRITE_EXCL', () => {
     assert.equal(constants.WRITE_EXCL, write_excl_val)
   })
 })
 
-describe('import', function () {
-  it('exists as function', function () {
+describe('import', () => {
+  it('exists as function', () => {
     assert.equal(typeof constants.import, 'function')
   })
-  it('populates an object', function () {
+  it('populates an object', () => {
     const newObj = {}
     constants.import(newObj)
     delete newObj.connection
@@ -54,27 +52,27 @@ describe('import', function () {
   })
 })
 
-describe('translate', function () {
-  it('converts num to str', function () {
+describe('translate', () => {
+  it('converts num to str', () => {
     assert.equal('CONT', constants.translate(900))
     assert.equal('DENY', constants.translate(902))
   })
-  it('UNKNOWN', function () {
+  it('UNKNOWN', () => {
     assert.equal('UNKNOWN', constants.translate(800))
   })
 })
 
-describe('connection', function () {
-  it('has connection state CMD', function () {
+describe('connection', () => {
+  it('has connection state CMD', () => {
     assert.equal(constants.connection.state.CMD, 1)
   })
-  it('has connection state STATE_CMD', function () {
+  it('has connection state STATE_CMD', () => {
     assert.equal(constants.connection.state.STATE_CMD, 1)
   })
-  it('has connection state DISCONNECTED', function () {
+  it('has connection state DISCONNECTED', () => {
     assert.equal(constants.connection.state.DISCONNECTED, 100)
   })
-  it('has connection state STATE_DISCONNECTED', function () {
+  it('has connection state STATE_DISCONNECTED', () => {
     assert.equal(constants.connection.state.STATE_DISCONNECTED, 100)
   })
 })
