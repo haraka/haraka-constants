@@ -1,8 +1,6 @@
-[![Build Status][ci-img]][ci-url]
-[![Coverage Status][cov-img]][cov-url]
-[![Code Climate][clim-img]][clim-url]
-
 # haraka-constants
+
+[![Build][ci-img]][ci-url] [![Cover][cov-img]][cov-url] [![Qlty][qlty-img]][qlty-url]
 
 Haraka constants. Exports the following SMTP result constants used throughout Haraka:
 
@@ -63,5 +61,5 @@ const constants = require('haraka-constants')
 [ci-url]: https://github.com/haraka/haraka-constants/actions/workflows/ci.yml
 [cov-img]: https://codecov.io/github/haraka/haraka-constants/coverage.svg
 [cov-url]: https://codecov.io/github/haraka/haraka-constants?branch=master
-[clim-img]: https://codeclimate.com/github/haraka/haraka-constants/badges/gpa.svg
-[clim-url]: https://codeclimate.com/github/haraka/haraka-constants
+[qlty-img]: https://qlty.sh/gh/haraka/projects/haraka-constants/maintainability.svg
+[qlty-url]: https://qlty.sh/gh/haraka/projects/haraka-constants
